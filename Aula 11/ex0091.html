@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite o pais em que você nasceu: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Iniciar" onclick= "res()">
+    <div id='res'></div>
+    <script>
+        function res(){
+            var txtpais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = String(txtpais.value)
+            res.innerHTML= `<p>Você nasceu no ${pais}</p>`
+            if (pais == 'Brasil'){
+                res.innerHTML += '<p>Você é <strong>brasileiro!</strong></p>'
+            }else{
+                res.innerHTML += '<p>Você é <strong>estrangeiro</strong></p>'
+            }
+        }
+    </script>
+    
+</body>
+</html>
